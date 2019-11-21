@@ -65,10 +65,12 @@ ReactDOM.render(
 **3. Route 渲染组件的方式**
    （1）component
    component 的值是一个组件，当URL 和Route 匹配时，component属性定义的组件就会被渲染。
+
    ```js
    <Route path='/foo' component={foo}/>
    //当URL = 'http://example.com/foo'时，Foo 组件会被渲染
    ```
+
    （2）render
    render 的值是一个函数，返回一个React 元素，并且可以为待渲染的组件传递额外的属性。
    ```js
@@ -82,6 +84,7 @@ ReactDOM.render(
 
 **4. Switch 和exact**
     当URL 和多个Route 匹配时，这些Route 都会被渲染，但如果只想让第一个匹配的Route 沉浸，可以把这些Route 放到一个Switch 组件中。如果想让URL 和Route 完全匹配时才渲染，可以使用Route 的exact 属性。
+
     ```js
     <Router>
         <Switch>
@@ -91,6 +94,7 @@ ReactDOM.render(
         </Switch>
     </Router>
     ```
+
 **5. 嵌套路由是指在Route 渲染的组件内部再定义新的Route。**
 ### 链接
 **Link 是React Router提供的链接组件，当点击时，页面该跳转到哪个路由**
